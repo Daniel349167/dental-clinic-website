@@ -1,46 +1,59 @@
-# Astro Starter Kit: Basics
+# Multilingual Dental Clinic Website
 
-```sh
-npm create astro@latest -- --template basics
-```
+Sitio web de una clinica dental construido con Astro y componentes reutilizables.
+El contenido esta disponible en espanol, ingles y catalan e incluye paginas de
+tratamientos, reserva de citas y documentos legales.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Caracteristicas
 
-## 🚀 Project Structure
+- Rutas completas en `es`, `en` y `ca`.
+- Paginas individuales para endodoncia, implantes, ortodoncia,
+  odontopediatria, estetica y rehabilitacion oral.
+- Formulario de citas y componentes compartidos para cabecera, hero, servicios
+  y pie de pagina.
+- Generacion estatica con Astro para reducir JavaScript y mejorar tiempos de
+  carga.
+- Integracion de componentes Vue cuando la interfaz necesita interactividad.
+- Configuracion de despliegue para Vercel.
 
-Inside of your Astro project, you'll see the following folders and files:
+## Estructura
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+src/
+  components/       componentes compartidos
+  layouts/          layout base y metadatos
+  pages/
+    es/             contenido en espanol
+    en/             contenido en ingles
+    ca/             contenido en catalan
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Stack
 
-## 🧞 Commands
+- Astro 7
+- Vue 3
+- CSS
+- Vercel
 
-All commands are run from the root of the project, from a terminal:
+## Desarrollo local
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+Requiere Node.js 22.12+.
 
-## 👀 Want to learn more?
+```bash
+npm ci
+npm run dev
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Verificar el build de produccion:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Consideraciones de produccion
+
+El formulario debe conectarse a un servicio de correo o CRM con validacion del
+lado servidor, proteccion anti-spam y tratamiento de datos acorde con la
+regulacion aplicable. El repositorio no contiene credenciales ni datos de
+pacientes.
