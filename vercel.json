@@ -1,9 +1,3 @@
 {
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/es",
-      "permanent": true
-    }
-  ]
+  "cleanUrls": true
 }
